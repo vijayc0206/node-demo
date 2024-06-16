@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 
-app.get("/get",(req,res)=>{
+app.get("api/get",(req,res)=>{
     res.send({"message":"My first Node js Application"});
 })
 
