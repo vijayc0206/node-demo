@@ -18,6 +18,7 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
+      - run: pm2 restart demoapi
 
   publish-npm:
     needs: build
@@ -29,6 +30,7 @@ jobs:
           node-version: 20
           registry-url: https://registry.npmjs.org/
       - run: npm ci
+      - run: pm2 restart demoapi
       
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
