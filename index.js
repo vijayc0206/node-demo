@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 require("dotenv").config()
-const port = 3000;
+const port = 8000;
 
 app.get("/api/get",(req,res)=>{
     res.send({"message":"My first Node js Application"});
