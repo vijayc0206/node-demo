@@ -31,6 +31,8 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - run: pm2 restart demoapi
-      
+      - run |
+            touch .env
+            echo "$({secrets.NODE_AUTH_TOKEN:})" > .env
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
