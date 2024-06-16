@@ -8,9 +8,9 @@ app.get("/api/get",(req,res)=>{
 })
 
 app.get("/api/getData",(req,res)=>{
-    res.send({"message":"${process.env.name} first Node js project"});
+    res.send({"message":`${process.env.name} first Node js project`});
 })
 
 app.listen(port,()=>{
-    console.log("Listening to ${port}");
+    console.log(`Listening to ${port}`);
 })
